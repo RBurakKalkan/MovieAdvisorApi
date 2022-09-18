@@ -12,7 +12,7 @@ namespace MovieAdvisor.Controllers
     public class MoviesRatingController : ControllerBase
     {
         [Authorize]
-        [HttpPost("AddRating/{UserId},{MovieId}")]
+        [HttpPost("AddRating/{UserId}/{MovieId}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(MovieRating))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> AddRating([Required] int UserId, [Required] int MovieId, string? Comment = null, int Rating = -1)

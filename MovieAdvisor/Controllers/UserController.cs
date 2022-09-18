@@ -20,7 +20,7 @@ namespace MovieAdvisor.Controllers
             using (var _context = new MovieAdvisorDBContext())
             {
                 Users Users = new Users();
-                if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserSurname)|| string.IsNullOrEmpty(Email))
+                if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserSurname) || string.IsNullOrEmpty(Email))
                 {
                     return NotFound();
                 }
